@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" />
+      <input type="email" />
+      <input type="number" />
+      <input type="submit" />
+    </form>
+
+    <script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        let isValid = true;
+        const inputs = this.querySelectorAll('input');
+        
+        inputs.forEach(input => {
+            const errorSpan = document.createElement('span');
+            errorSpan.className = 'error';
+            input.parentNode.insertBefore(errorSpan, input.nextSibling);
+            
+            switch(input.type) {
+                case 'text':
+                    if (input.value.trim().length < 3) {
+                        errorSpan.textContent = 'Text must be at least 3 characters long';
+                        isValid = false;
+                    }
+                    break;
+                case 'email':
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(input.value)) {
+                        errorSpan.textContent = 'Please enter a valid email address';
+                        isValid = false;
+                    }
+                    break;
+                case 'number':
+                    if (isNaN(input.value) || input.value.trim() === '') {
+                        errorSpan.textContent = 'Please enter a valid number';
+                        isValid = false;
+                    }
+                    break;
+            }
+        });
+        
+        if (isValid) {
+            this.submit();
+        }
+    });
+    </script>
+  </body>
+</html>

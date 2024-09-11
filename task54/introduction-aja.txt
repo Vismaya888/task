@@ -1,0 +1,18 @@
+Introduction to AJAX
+
+
+AJAX (Asynchronous JavaScript and XML) is a set of web development techniques that allows web applications to send and receive data from a server asynchronously without interfering with the display and behavior of the existing page. Despite its name, AJAX doesn't necessarily use XML; JSON is often used instead due to its lighter weight and easier parsing in JavaScript.
+
+Key concepts of AJAX:
+
+1. Asynchronous: Requests are sent and responses are received without blocking the execution of other scripts.
+
+2. JavaScript: Used to make requests to the server and handle responses.
+
+3. XMLHttpRequest (XHR) object: The traditional way to make AJAX requests, though modern alternatives like the Fetch API are now available.
+
+4. JSON/XML: Data formats commonly used for transmitting data between the server and the client.
+
+5. DOM manipulation: Used to update parts of the web page with the received data without reloading the entire page.
+
+

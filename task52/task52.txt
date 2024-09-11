@@ -1,0 +1,144 @@
+EFFECTS 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Effects</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            margin: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h2>jQuery Effects Examples</h2>
+    
+    <div id="fadeBox" class="box"></div>
+    <button id="fadeToggle">Fade Toggle</button>
+
+    <div id="slideBox" class="box"></div>
+    <button id="slideToggle">Slide Toggle</button>
+
+    <div id="animateBox" class="box"></div>
+    <button id="animate">Animate</button>
+
+    <div id="chainBox" class="box"></div>
+    <button id="chain">Chain Effects</button>
+
+    <script>
+        $(document).ready(function() {
+            // Fade effect
+            $("#fadeToggle").click(function() {
+                $("#fadeBox").fadeToggle(1000);
+            });
+
+            // Slide effect
+            $("#slideToggle").click(function() {
+                $("#slideBox").slideToggle(1000);
+            });
+
+            // Animate effect
+            $("#animate").click(function() {
+                $("#animateBox").animate({
+                    width: "+=50px",
+                    height: "+=50px",
+                    opacity: 0.5
+                }, 1000);
+            });
+
+            // Chaining effects
+            $("#chain").click(function() {
+                $("#chainBox")
+                    .slideUp(500)
+                    .delay(500)
+                    .fadeIn(500)
+                    .animate({ width: "+=50px" }, 500)
+                    .animate({ height: "+=50px" }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
+
+HTML MANIPULATION
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery HTML Manipulation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .highlight { background-color: yellow; }
+    </style>
+</head>
+<body>
+    <h2>jQuery HTML Manipulation Examples</h2>
+    
+    <div id="content">
+        <p>This is a paragraph.</p>
+    </div>
+
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <button id="manipulate">Manipulate HTML</button>
+
+    <script>
+        $(document).ready(function() {
+            $("#manipulate").click(function() {
+                // Changing HTML content
+                $("#content").html("<h3>New Content</h3><p>This content was added with jQuery.</p>");
+
+                // Appending content
+                $("#content").append("<p>Appended paragraph</p>");
+
+                // Prepending content
+                $("#list").prepend("<li>New first item</li>");
+
+                // Adding elements
+                $("<li>New last item</li>").appendTo("#list");
+
+                // Removing elements
+                $("#list li:eq(1)").remove();
+
+                // Modifying attributes
+                $("#content h3").attr("class", "highlight");
+
+                // Modifying CSS
+                $("#list").css("color", "blue");
+
+                // Adding/Removing classes
+                $("p").addClass("highlight");
+                $("li:last").removeClass("highlight");
+
+                // Wrapping elements
+                $("h3").wrap("<div class='wrapper'></div>");
+
+                // Modifying text
+                $("li:first").text("Modified first item");
+
+                // Cloning elements
+                var clonedItem = $("li:last").clone();
+                clonedItem.text("Cloned item").appendTo("#list");
+
+                // Replacing elements
+                $("p:last").replaceWith("<h4>Replaced paragraph</h4>");
+
+                // Empty an element
+                $("#manipulate").empty().text("Manipulated!");
+            });
+        });
+    </script>
+</body>
+</html>

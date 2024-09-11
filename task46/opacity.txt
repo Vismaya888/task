@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .semi-trans{
+            width: 300px;
+            height: 300px;
+            opacity: 50%;
+            
+            background-color:red;
+           
+        }
+        .opaque{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+        .main{
+            display: flex;
+            justify-content: space-between;
+            width: 700px;
+        }
+    </style>
+</head>
+<body>
+    
+        <div class="semi-trans">
+
+        </div>
+        
+
+    
+    <div class="opaque">
+    
+    </div>
+    
+</body>
+</html>

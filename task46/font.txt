@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .special {
+        font-size: large;
+        font-family: sans-serif;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+      dolorum ut quaerat mollitia dolorem eveniet necessitatibus, error, ratione
+      cumque adipisci ad enim placeat asperiores repudiandae, unde blanditiis
+      explicabo reprehenderit saepe?
+    </p>
+    <p class="special">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi numquam
+      vero saepe reiciendis minus esse fugiat sint, placeat facere, delectus at.
+      Id, cumque. Nihil incidunt praesentium, quasi molestiae quia id?
+    </p>
+  </body>
+</html>

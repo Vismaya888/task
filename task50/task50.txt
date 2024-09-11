@@ -1,0 +1,97 @@
+CHANGE THE CONTENT OF A PARAGRAPH
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="chg">Welcome to Javascript</h1>
+    <button onclick="change()">Change</button>
+    <script>
+        function change(){
+            document.getElementById("chg").innerHTML = "This paragraph is changed";
+        }
+    </script>
+    
+</body>
+</html>
+
+MULTIPICATION OF THREE NUMBERS
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Multiplication Table</h1>
+    <input type="text" id="num" placeholder="Enter a number">
+    <input type="text" id="num1" placeholder="Enter second number">
+    <input type="text" name="" id="num3" placeholder="Enter third number">
+    <button onclick="mul()">Multiply</button>
+    <p id="mul"></p>
+    <script>
+        function mul(){
+            let a = parseInt(document.getElementById("num").value);
+            let b = parseInt(document.getElementById("num1").value);
+            let c = parseInt(document.getElementById("num3").value);
+            let mul = a * b * c;
+            document.getElementById("mul").innerHTML = "The multiplication of " + a + " and " + b + " and " + c + " is " + mul;
+            
+        }
+    </script>
+</body>
+</html>
+
+1-100 USING WHILE LOOP FOR LOOP AND DO WHILE LOOP
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display 1 to 100</title>
+</head>
+<body>
+    <h1>Numbers 1 to 100</h1>
+    <h2>For Loop</h2>
+    <div id="forLoop"></div>
+    <h2>While Loop</h2>
+    <div id="whileLoop"></div>
+    <h2>Do-While Loop</h2>
+    <div id="doWhileLoop"></div>
+
+    <script>
+        // For Loop
+        let forOutput = '';
+        for (let i = 1; i <= 100; i++) {
+            forOutput += i + ' ';
+        }
+        document.getElementById('forLoop').textContent = forOutput;
+
+        // While Loop
+        let whileOutput = '';
+        let j = 1;
+        while (j <= 100) {
+            whileOutput += j + ' ';
+            j++;
+        }
+        document.getElementById('whileLoop').textContent = whileOutput;
+
+        // Do-While Loop
+        let doWhileOutput = '';
+        let k = 1;
+        do {
+            doWhileOutput += k + ' ';
+            k++;
+        } while (k <= 100);
+        document.getElementById('doWhileLoop').textContent = doWhileOutput;
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,45 @@
+Sum of two numbers
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sum of two numbers</h1>
+    <script>
+        let a = parseInt(prompt("Enter the first number:"));
+        let b = parseInt(prompt("Enter the second number:"));
+        let sum = a + b;
+        document.write("The sum of " + a + " and " + b + " is " + sum);
+    </script>
+
+    
+</body>
+</html>
+
+
+
+Division and Multiplication of two numbers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Division and Multiplication of two numbers</h1>
+    <script>
+        let a = parseInt(prompt("Enter the first number:"));
+        let b = parseInt(prompt("Enter the second number:"));
+        let div = a / b;
+        let mul = a * b;
+        document.write("The division of " + a + " and " + b + " is " + div);
+        document.write("The multiplication of " + a + " and " + b + " is " + mul);
+    </script>
+</body>
+</html>
+

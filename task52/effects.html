@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Effects</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            margin: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h2>jQuery Effects Examples</h2>
+    
+    <div id="fadeBox" class="box"></div>
+    <button id="fadeToggle">Fade Toggle</button>
+
+    <div id="slideBox" class="box"></div>
+    <button id="slideToggle">Slide Toggle</button>
+
+    <div id="animateBox" class="box"></div>
+    <button id="animate">Animate</button>
+
+    <div id="chainBox" class="box"></div>
+    <button id="chain">Chain Effects</button>
+
+    <script>
+        $(document).ready(function() {
+            // Fade effect
+            $("#fadeToggle").click(function() {
+                $("#fadeBox").fadeToggle(1000);
+            });
+
+            // Slide effect
+            $("#slideToggle").click(function() {
+                $("#slideBox").slideToggle(1000);
+            });
+
+            // Animate effect
+            $("#animate").click(function() {
+                $("#animateBox").animate({
+                    width: "+=50px",
+                    height: "+=50px",
+                    opacity: 0.5
+                }, 1000);
+            });
+
+            // Chaining effects
+            $("#chain").click(function() {
+                $("#chainBox")
+                    .slideUp(500)
+                    .delay(500)
+                    .fadeIn(500)
+                    .animate({ width: "+=50px" }, 500)
+                    .animate({ height: "+=50px" }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
